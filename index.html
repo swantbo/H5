@@ -47,7 +47,7 @@
 			if (channel && channel == 'wechat'){
 				var testnum = $("#testinput").val();
 			    wx.miniProgram.navigateTo({
-			        url: '/home/home?phone？testnum='+testnum,//此处的url是你小程序里面页面的路由
+			        url: '/pages/home/home?testnum='+testnum,//此处的url是你小程序里面页面的路由
 			    });
 			} 
 		});
