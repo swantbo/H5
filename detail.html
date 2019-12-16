@@ -44,13 +44,13 @@
 		}
     	var testarg = GetQueryString("testarg");
     	var channel = GetQueryString("channel");
-		$("#channel").html(channel);
+    	$("#channel").html(channel);
     	$("#testarg").html(testarg);
 		$(document).on('click', '#testbtn',function(){
 			if (channel && channel == 'wechat'){
 				var testnum = $("#testinput").val();
-			    wx.miniProgram.switchTab({
-			        url: '/pages/home/home  //此处的url是你小程序里面页面的路由 tab页不可以传参
+			    wx.miniProgram.navigateTo({
+			        url: '/pages/detail/detail?testnum='+testnum   //此处的url是你小程序里面页面的路由
 			    });
 			} 
 		});
